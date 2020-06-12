@@ -41,6 +41,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ### Confirm successful setup
 
-Check out application state in the browser and confirm '@ngrx/state/init'
+Check out application state in the browser and confirm *@ngrx/state/init* in the dev tools
 
-![Store initialized succesfully](https://user-images.githubusercontent.com/13346973/84490358-58f02000-aca3-11ea-919d-f90be2f998b3.png)
+![Store initialized succesfully](https://user-images.githubusercontent.com/13346973/84490358-58f02000-aca3-11ea-919d-f90be2f998b3.png "Example in Google Chrome")*Example in Google Chrome*
