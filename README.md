@@ -69,7 +69,17 @@ backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher
 
 # Exercise Two: setting up a state for counter
 
-We will want to store the counter state in our store. What do we have to do?
+As we want to have a reactive architecture, we store the counter state in our store. What do we have to do?
+
+remember this slide?
+
+![reactive-architecture](https://user-images.githubusercontent.com/13346973/84515112-55bd5a00-accc-11ea-8b76-b560e8254a99.png)
+
+We will implement this step by step.
+
+1. Store including State (Exercise Two, part 1 and 2)
+2. View with Selectors (Exercises Three & Four)
+3. Actions (Exercise Five)
 
 ## Part 1: setting up the root state
 
@@ -198,6 +208,13 @@ As a last step we want to be able to manipulate the data in the store. this is p
 
 *hint: use @ngrx/schematics where possible*
 
+### Possible solution
+
+![et-voila](https://user-images.githubusercontent.com/13346973/84514627-9ec0de80-accb-11ea-9b3d-bf80628bc596.gif)*et voilà le travail :fire:*
+
+We're set for the training!
+
 ### Backup branch
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
+
