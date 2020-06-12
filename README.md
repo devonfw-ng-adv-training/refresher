@@ -185,3 +185,19 @@ backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher
 
 ## Exercise Five: using ngrx actions
 
+As a last step we want to be able to manipulate the data in the store. this is possible via actions which we dispatch.
+
+### Doings
+
+- create actions for 
+    - incrementing
+    - decrementing
+    - resetting
+- create reducer functions for all actions
+- dispatch actions in counter component
+
+*hint: use @ngrx/schematics where possible*
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)

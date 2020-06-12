@@ -4,6 +4,7 @@ import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators'
 import { AppState } from 'src/app/reducers';
+import { selectCounterValue } from '../reducers/counter.selectors';
 
 @Component({
   selector: 'app-counter',
@@ -15,7 +16,7 @@ export class CounterComponent {
 
   value: number = 0;
 
-  storeValue$: Observable<number> = this.store$.pipe(select(val => val.counter.value), tap(console.log));
+  storeValue$: Observable<number> = this.store$.pipe(select(selectCounterValue), tap(console.log));
 
   constructor(private store$: Store<AppState>) {
   }
