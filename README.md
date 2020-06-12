@@ -148,3 +148,23 @@ fire up the application and check out if the value on Redux DevTools is correctl
 ### Backup branch
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
+
+
+## Exercise Three: wiring up the counter to the state
+
+We now want to use the counter state to display the value
+
+For this we have the following doings:
+
+### Doings
+
+- create counter component
+- extract business logic from app component to counter component
+- use counter component in app component
+- verify stable application
+- inject `Store<AppState>` to counter component
+- display `value` of `CounterState` in parallel to component value
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-defining-selectors) and will be used in the next step
