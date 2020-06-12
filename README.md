@@ -69,7 +69,17 @@ backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher
 
 # Exercise Two: setting up a state for counter
 
-We will want to store the counter state in our store. What do we have to do?
+As we want to have a reactive architecture, we store the counter state in our store. What do we have to do?
+
+remember this slide?
+
+![reactive-architecture](https://user-images.githubusercontent.com/13346973/84515112-55bd5a00-accc-11ea-8b76-b560e8254a99.png)
+
+We will implement this step by step.
+
+1. Store including State (Exercise Two, part 1 and 2)
+2. View with Selectors (Exercises Three & Four)
+3. Actions (Exercise Five)
 
 ## Part 1: setting up the root state
 
@@ -167,4 +177,44 @@ For this we have the following doings:
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-defining-selectors) and will be used in the next step
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
+
+## Exercise Four: using ngrx selectors
+
+Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for displaying the value. This has many advantages. One of them is information hiding, so we only get information which is relevant in the specific component. For us it's the value of counter.
+
+### Doings
+
+- create feature selector for `counter` via @ngrx/schematics
+- create specific selector for `value` of `CounterState`
+- use selector in `counter.component.ts`
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
+
+## Exercise Five: using ngrx actions
+
+As a last step we want to be able to manipulate the data in the store. this is possible via actions which we dispatch.
+
+### Doings
+
+- create actions for 
+    - incrementing
+    - decrementing
+    - resetting
+- create reducer functions for all actions
+- dispatch actions in counter component
+
+*hint: use @ngrx/schematics where possible*
+
+### Possible solution
+
+![et-voila](https://user-images.githubusercontent.com/13346973/84514627-9ec0de80-accb-11ea-9b3d-bf80628bc596.gif)*et voilà le travail :fire:*
+
+We're set for the training!
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
+
