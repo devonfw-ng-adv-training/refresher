@@ -69,7 +69,17 @@ backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher
 
 # Exercise Two: setting up a state for counter
 
-We will want to store the counter state in our store. What do we have to do?
+As we want to have a reactive architecture, we store the counter state in our store. What do we have to do?
+
+remember this slide?
+
+![reactive-architecture](https://user-images.githubusercontent.com/13346973/84515112-55bd5a00-accc-11ea-8b76-b560e8254a99.png)
+
+We will implement this step by step.
+
+1. Store including State (Exercise Two, part 1 and 2)
+2. View with Selectors (Exercises Three & Four)
+3. Actions (Exercise Five)
 
 ## Part 1: setting up the root state
 
@@ -84,7 +94,7 @@ Does your application still work? How does the state in Redux Devtools now look 
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/3-start-exercise-two-pt-two) and will be used in the next step
 
 ## Part 2: setting up the counter state
 
@@ -103,17 +113,17 @@ We now want to store the partial state `CounterState` in `AppState`. You can use
 - add state & reducer to AppState & AppReducer
 
 
-### How-To with schematics
+### solution with schematics
 
-- *(optional) add module*
+#### *(optional) add module*
 
       ng generate module counter --flat false
 
-- generate feature store via cli
+#### generate feature store via cli
 
       ng generate @ngrx/schematics:store counter/Counter -m counter.module.ts
 
-- in `src/app/counter/reducers/index.ts`
+#### in `src/app/counter/reducers/index.ts`
 
     - rename `State` to `CounterState` 
     - remove meta reducer
@@ -133,11 +143,78 @@ We now want to store the partial state `CounterState` in `AppState`. You can use
             return counterReducer(state, action);
           }
 
-- in `src/app/reducers/index.ts`
-    - add `CounterState` to `AppState`
-    - add `reducer` to `reducers`
+#### in `src/app/reducers/index.ts`
 
-- verify result with redux devtools
+- add `CounterState` to `AppState`
+- add `reducer` to `reducers`
 
-    ![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)
+#### verify result with redux devtools
+
+fire up the application and check out if the value on Redux DevTools is correctly set to initial value of 0
+
+![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)*counter shall be initialized*
+
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
+
+
+## Exercise Three: wiring up the counter to the state
+
+We now want to use the counter state to display the value
+
+For this we have the following doings:
+
+### Doings
+
+- create counter component
+- extract business logic from app component to counter component
+- use counter component in app component
+- verify stable application
+- inject `Store<AppState>` to counter component
+- display `value` of `CounterState` in parallel to component value
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
+
+## Exercise Four: using ngrx selectors
+
+Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for displaying the value. This has many advantages. One of them is information hiding, so we only get information which is relevant in the specific component. For us it's the value of counter.
+
+### Doings
+
+- create feature selector for `counter` via @ngrx/schematics
+- create specific selector for `value` of `CounterState`
+- use selector in `counter.component.ts`
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
+
+## Exercise Five: using ngrx actions
+
+As a last step we want to be able to manipulate the data in the store. this is possible via actions which we dispatch.
+
+### Doings
+
+- create actions for 
+    - incrementing
+    - decrementing
+    - resetting
+- create reducer functions for all actions
+- dispatch actions in counter component
+
+*hint: use @ngrx/schematics where possible*
+
+### Possible solution
+
+![et-voila](https://user-images.githubusercontent.com/13346973/84514627-9ec0de80-accb-11ea-9b3d-bf80628bc596.gif)*et voilà le travail :fire:*
+
+We're set for the training!
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
 
