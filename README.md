@@ -60,7 +60,12 @@ We will want to create a counter functionality to a otherwise empty application.
 
 ![functionalities](https://user-images.githubusercontent.com/13346973/84493043-6a3b2b80-aca7-11ea-9f2a-0dd667c6425f.gif)*Exercise One: functionalities in action*
 
-Implement these functionalities to app.component and test the application
+Implement these functionalities to app.component and test the application.
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
+
 
 # Exercise Two: setting up a state for counter
 
