@@ -22,5 +22,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - Install dependencies
 > npm install 
 
-- Add [ngrx/store](https://ngrx.io/guide/store/install) &  [@ngrx/store-devtools](https://ngrx.io/guide/store-devtools/install) to project
+- Add [@ngrx/store](https://ngrx.io/guide/store/install) &  [@ngrx/store-devtools](https://ngrx.io/guide/store-devtools/install) to project
 > 
