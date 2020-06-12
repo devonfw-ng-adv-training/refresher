@@ -167,4 +167,21 @@ For this we have the following doings:
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-defining-selectors) and will be used in the next step
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
+
+## Exercise Four: using ngrx selectors
+
+Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for displaying the value. This has many advantages. One of them is information hiding, so we only get information which is relevant in the specific component. For us it's the value of counter.
+
+### Doings
+
+- create feature selector for `counter` via @ngrx/schematics
+- create specific selector for `value` of `CounterState`
+- use selector in `counter.component.ts`
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
+
+## Exercise Five: using ngrx actions
+
