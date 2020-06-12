@@ -66,9 +66,17 @@ Implement these functionalities to app.component and test the application
 
 We will want to store the counter state in our store. What do we have to do?
 
-- create `root.reducer.ts` in `src/app`
+## Part 1: setting up the root state
+
+create root state (we call it `AppState` in this project)
+
+- create file `index.ts` in `src/app/reducers`
 - define & export application state (empty interface `AppState`)
 - define & export root reducer (empty object of ActionReducerMap`<AppState`>)
 - import root reducer in `StoreModule` in `app.module.ts`
 
 Does your application still work? How does the state in Redux Devtools now look like?
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
