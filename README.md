@@ -84,7 +84,7 @@ Does your application still work? How does the state in Redux Devtools now look 
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/3-start-exercise-two-pt-two) and will be used in the next step
 
 ## Part 2: setting up the counter state
 
@@ -103,17 +103,17 @@ We now want to store the partial state `CounterState` in `AppState`. You can use
 - add state & reducer to AppState & AppReducer
 
 
-### How-To with schematics
+### solution with schematics
 
-- *(optional) add module*
+#### *(optional) add module*
 
       ng generate module counter --flat false
 
-- generate feature store via cli
+#### generate feature store via cli
 
       ng generate @ngrx/schematics:store counter/Counter -m counter.module.ts
 
-- in `src/app/counter/reducers/index.ts`
+#### in `src/app/counter/reducers/index.ts`
 
     - rename `State` to `CounterState` 
     - remove meta reducer
@@ -133,11 +133,18 @@ We now want to store the partial state `CounterState` in `AppState`. You can use
             return counterReducer(state, action);
           }
 
-- in `src/app/reducers/index.ts`
-    - add `CounterState` to `AppState`
-    - add `reducer` to `reducers`
+#### in `src/app/reducers/index.ts`
 
-- verify result with redux devtools
+- add `CounterState` to `AppState`
+- add `reducer` to `reducers`
 
-    ![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)
+#### verify result with redux devtools
 
+fire up the application and check out if the value on Redux DevTools is correctly set to initial value of 0
+
+![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)*counter shall be initialized*
+
+
+### Backup branch
+
+backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
