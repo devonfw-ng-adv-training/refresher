@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-adv-refresher';
+  value: number = 0;
+
+  onClicked(change?: number) {
+    this.value = (change) ? this.value + change : 0;
+  }
 }
