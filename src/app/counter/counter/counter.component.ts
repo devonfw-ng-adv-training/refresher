@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CounterState } from '../reducers';
+import * as CounterActions from '../reducers/counter.actions';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators'
@@ -23,5 +23,15 @@ export class CounterComponent {
 
   onClicked(change?: number) {
     this.value = (change) ? this.value + change : 0;
+  }
+
+  onIncremented(change: number) {
+    this.store$.dispatch(CounterActions.increment({ change }))
+  }
+  onDecremented(change: number) {
+    this.store$.dispatch(CounterActions.decrement({ change }))
+  }
+  onReset() {
+    this.store$.dispatch(CounterActions.reset())
   }
 }
