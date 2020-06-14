@@ -31,7 +31,7 @@ If you have trouble during one step, you can cheat by taking a look at the speci
 
 If there are questions, you can contact one of your trainers or keep them for the training.
 
-## Basic Setup of ngrx
+## 1. Basic Setup of ngrx
 
 ### Check out project
     
@@ -66,7 +66,7 @@ Check out application state in the browser and confirm *@ngrx/state/init* in the
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
 
-## Exercice One: adding a counter to app.component
+## 2. Exercice One: adding a counter to app.component
 
 We will want to create a counter functionality to a otherwise empty application. The counter has the following requirements
 
@@ -84,7 +84,7 @@ Implement these functionalities to app.component and test the application.
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
 
 
-## Exercise Two: setting up a state for counter
+## 3. Exercise Two: setting up a state for counter
 
 As we want to have a reactive architecture, we store the counter state in our store. What do we have to do?
 
@@ -177,7 +177,7 @@ fire up the application and check out if the value on Redux DevTools is correctl
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
 
 
-## Exercise Three: wiring up the counter to the state
+## 4. Exercise Three: wiring up the counter to the state
 
 We now want to use the counter state to display the value
 
@@ -196,7 +196,7 @@ For this we have the following doings:
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
 
-## Exercise Four: using ngrx selectors
+## 5. Exercise Four: using ngrx selectors
 
 Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for displaying the value. This has many advantages. One of them is information hiding, so we only get information which is relevant in the specific component. For us it's the value of counter.
 
@@ -210,7 +210,7 @@ Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for d
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
 
-## Exercise Five: using ngrx actions
+## 6. Exercise Five: using ngrx actions
 
 As a last step we want to be able to manipulate the data in the store. this is possible via actions which we dispatch.
 
