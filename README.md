@@ -75,7 +75,9 @@ We will want to create a counter functionality to a otherwise empty application.
 - decrement by -1, -10, -100
 - reset counter to initial value
 
-![functionalities](https://user-images.githubusercontent.com/13346973/84493043-6a3b2b80-aca7-11ea-9f2a-0dd667c6425f.gif)*Exercise One: functionalities in action*
+![functionalities](https://user-images.githubusercontent.com/13346973/84493043-6a3b2b80-aca7-11ea-9f2a-0dd667c6425f.gif "Exercise One: functionalities in action")
+
+*Exercise One: functionalities in action*
 
 Implement these functionalities to app.component and test the application.
 
@@ -90,7 +92,7 @@ As we want to have a reactive architecture, we store the counter state in our st
 
 remember this slide?
 
-![reactive-architecture](https://user-images.githubusercontent.com/13346973/84515112-55bd5a00-accc-11ea-8b76-b560e8254a99.png)
+![reactive-architecture](https://user-images.githubusercontent.com/13346973/84515112-55bd5a00-accc-11ea-8b76-b560e8254a99.png "reactive architecture")
 
 We will implement this step by step.
 
@@ -169,7 +171,7 @@ We now want to store the partial state `CounterState` in `AppState`. You can use
 
 fire up the application and check out if the value on Redux DevTools is correctly set to initial value of 0
 
-![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)*counter shall be initialized*
+![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)
 
 
 ### Backup branch
@@ -227,9 +229,9 @@ As a last step we want to be able to manipulate the data in the store. this is p
 
 ### Possible solution
 
-![et-voila](https://user-images.githubusercontent.com/13346973/84514627-9ec0de80-accb-11ea-9b3d-bf80628bc596.gif)*et voilà le travail :fire:*
+![et-voila](https://user-images.githubusercontent.com/13346973/84514627-9ec0de80-accb-11ea-9b3d-bf80628bc596.gif)
 
-We're set for the training!
+*et voilà le travail :fire:* - We're set for the training!
 
 ### Backup branch
 
