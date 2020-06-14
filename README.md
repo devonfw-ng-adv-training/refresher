@@ -1,20 +1,37 @@
 # NgAdvRefresher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+## Introduction
 
-## Development server
+This repository contains an exercise which you may do to practice some angular basics again. The main focus is on setting up a reactive architecture.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+*hint: if you don't want to use [ngrx](https://ngrx.io/docs), you can also use flux pattern and store the values in subjects.*
 
-## Code scaffolding
+### further read
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- (angular foundations: all slides)[https://devonfw.com/devon4ng-training/agenda/foundations-remote.html]
+- (angular foundations: ngrx intro)[https://devonfw.com/devon4ng-training/ngrx/intro.html]
+- (official docs)[https://ngrx.io/docs]
 
-## Build
+### content of exercise
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+What will be done in this exercise?
 
-# Basic Setup of ngrx
+1. basic setup of project including redux devtools
+2. adding business functionality in app.component
+3. adding state to the application
+    1. root state
+    2. business state
+4. displaying state
+5. creating specific selector for state
+6. creating actions & reducer functions for state changes
+
+If you have trouble during one step, you can cheat by taking a look at the specified backup branch.
+
+*hint: provided solution in backup branch may not be the best possible solution*
+
+If there are questions, you can contact one of your trainers or keep them for the training.
+
+## Basic Setup of ngrx
 
 ### Check out project
     
@@ -49,7 +66,7 @@ Check out application state in the browser and confirm *@ngrx/state/init* in the
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
 
-# Exercice One: adding a counter to app.component
+## Exercice One: adding a counter to app.component
 
 We will want to create a counter functionality to a otherwise empty application. The counter has the following requirements
 
@@ -67,7 +84,7 @@ Implement these functionalities to app.component and test the application.
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
 
 
-# Exercise Two: setting up a state for counter
+## Exercise Two: setting up a state for counter
 
 As we want to have a reactive architecture, we store the counter state in our store. What do we have to do?
 
@@ -217,4 +234,3 @@ We're set for the training!
 ### Backup branch
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
-
