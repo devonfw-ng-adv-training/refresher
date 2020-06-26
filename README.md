@@ -1,20 +1,37 @@
 # NgAdvRefresher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+## Introduction
 
-## Development server
+This repository contains an exercise which you may do to practice some angular basics again. The main focus is on setting up a reactive architecture.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+*hint: if you don't want to use [ngrx](https://ngrx.io/docs), you can also use flux pattern and store the values in subjects.*
 
-## Code scaffolding
+### further read
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [angular foundations: all slides](https://devonfw.com/devon4ng-training/agenda/foundations-remote.html)
+- [angular foundations: ngrx intro](https://devonfw.com/devon4ng-training/ngrx/intro.html)
+- [official docs](https://ngrx.io/docs)
 
-## Build
+### content of exercise
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+What will be done in this exercise?
 
-# Basic Setup of ngrx
+1. basic setup of project including redux devtools
+2. adding business functionality in app.component
+3. adding state to the application
+    1. root state
+    2. business state
+4. displaying state
+5. creating specific selector for state
+6. creating actions & reducer functions for state changes
+
+If you have trouble during one step, you can cheat by taking a look at the specified backup branch.
+
+*hint: provided solution in backup branch may not be the best possible solution*
+
+If there are questions, you can contact one of your trainers or keep them for the training.
+
+## 1. Basic Setup of ngrx
 
 ### Check out project
     
@@ -49,7 +66,7 @@ Check out application state in the browser and confirm *@ngrx/state/init* in the
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
 
-# Exercice One: adding a counter to app.component
+## 2. Exercice One: adding a counter to app.component
 
 We will want to create a counter functionality to a otherwise empty application. The counter has the following requirements
 
@@ -58,7 +75,9 @@ We will want to create a counter functionality to a otherwise empty application.
 - decrement by -1, -10, -100
 - reset counter to initial value
 
-![functionalities](https://user-images.githubusercontent.com/13346973/84493043-6a3b2b80-aca7-11ea-9f2a-0dd667c6425f.gif)*Exercise One: functionalities in action*
+![functionalities](https://user-images.githubusercontent.com/13346973/84493043-6a3b2b80-aca7-11ea-9f2a-0dd667c6425f.gif "Exercise One: functionalities in action")
+
+*Exercise One: functionalities in action*
 
 Implement these functionalities to app.component and test the application.
 
@@ -67,13 +86,13 @@ Implement these functionalities to app.component and test the application.
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
 
 
-# Exercise Two: setting up a state for counter
+## 3. Exercise Two: setting up a state for counter
 
 As we want to have a reactive architecture, we store the counter state in our store. What do we have to do?
 
 remember this slide?
 
-![reactive-architecture](https://user-images.githubusercontent.com/13346973/84515112-55bd5a00-accc-11ea-8b76-b560e8254a99.png)
+![reactive-architecture](https://user-images.githubusercontent.com/13346973/84515112-55bd5a00-accc-11ea-8b76-b560e8254a99.png "reactive architecture")
 
 We will implement this step by step.
 
@@ -152,7 +171,7 @@ We now want to store the partial state `CounterState` in `AppState`. You can use
 
 fire up the application and check out if the value on Redux DevTools is correctly set to initial value of 0
 
-![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)*counter shall be initialized*
+![counter-value-initialized](https://user-images.githubusercontent.com/13346973/84502696-22bd9b00-acb9-11ea-8ff3-3dcdc3daefd2.png)
 
 
 ### Backup branch
@@ -160,7 +179,7 @@ fire up the application and check out if the value on Redux DevTools is correctl
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
 
 
-## Exercise Three: wiring up the counter to the state
+## 4. Exercise Three: wiring up the counter to the state
 
 We now want to use the counter state to display the value
 
@@ -179,7 +198,7 @@ For this we have the following doings:
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
 
-## Exercise Four: using ngrx selectors
+## 5. Exercise Four: using ngrx selectors
 
 Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for displaying the value. This has many advantages. One of them is information hiding, so we only get information which is relevant in the specific component. For us it's the value of counter.
 
@@ -193,7 +212,7 @@ Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for d
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
 
-## Exercise Five: using ngrx actions
+## 6. Exercise Five: using ngrx actions
 
 As a last step we want to be able to manipulate the data in the store. this is possible via actions which we dispatch.
 
@@ -210,11 +229,10 @@ As a last step we want to be able to manipulate the data in the store. this is p
 
 ### Possible solution
 
-![et-voila](https://user-images.githubusercontent.com/13346973/84514627-9ec0de80-accb-11ea-9b3d-bf80628bc596.gif)*et voilà le travail :fire:*
+![et-voila](https://user-images.githubusercontent.com/13346973/84514627-9ec0de80-accb-11ea-9b3d-bf80628bc596.gif)
 
-We're set for the training!
+*et voilà le travail :fire:* - We're set for the training!
 
 ### Backup branch
 
 backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
-
