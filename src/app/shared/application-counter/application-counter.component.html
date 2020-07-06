@@ -1,0 +1,6 @@
+<p>application-counter works!</p>
+<ng-container *ngIf="(counter$ | async) as counter; else zero">
+    this is on every page {{counter}}
+</ng-container>
+
+<ng-template #zero><span style="color: red;">your counter is zero</span></ng-template>

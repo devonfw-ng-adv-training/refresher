@@ -6,6 +6,9 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { reducers } from './reducers';
+import { CounterModule } from './counter/counter.module';
+import { EffectsModule } from '@ngrx/effects';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +16,11 @@ import { reducers } from './reducers';
   ],
   imports: [
     BrowserModule,
+    CounterModule,
+    SharedModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    !environment.production ? []: StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]

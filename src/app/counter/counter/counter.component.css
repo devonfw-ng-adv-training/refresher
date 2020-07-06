@@ -1,0 +1,43 @@
+* {
+    font-family: "Segoe UI", sans-serif;
+    list-style: none;
+}
+
+#fade-it {
+    padding: 15px;
+    width: 200px;
+}
+
+@-webkit-keyframes yellow-fade {
+    from {
+        background: red;
+    }
+    to {
+        background: #fff;
+    }
+}
+
+@-moz-keyframes yellow-fade {
+    from {
+        background: red;
+    }
+    to {
+        background: #fff;
+    }
+}
+
+@keyframes yellow-fade {
+    from {
+        background: red;
+    }
+    to {
+        background: #fff;
+    }
+}
+
+#fade-it {
+    -webkit-animation: yellow-fade 5s ease-in-out 0s;
+    -moz-animation: yellow-fade 5s ease-in-out 0s;
+    -o-animation: yellow-fade 5s ease-in-out 0s;
+    animation: yellow-fade 5s ease-in-out 0s;
+}

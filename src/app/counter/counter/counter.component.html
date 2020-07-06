@@ -1,0 +1,22 @@
+<h1>Counter</h1>
+<section>
+    <h2>Controls</h2>
+    <button type="button" (click)="increment(1)">+1</button>
+    <button type="button" (click)="increment(10)">+10</button>
+    <button type="button" (click)="increment(100)">+100</button>
+    <button type="button" (click)="reset()">Reset</button>
+    <button type="button" (click)="decrement(1)">-1</button>
+    <button type="button" (click)="decrement(10)">-10</button>
+    <button type="button" (click)="decrement(100)">-100</button>
+</section>
+<section>
+    <h2>State Value</h2>
+    decimal: {{counterVal$ | async }} binary: {{binaryVal$ | async }}
+</section>
+<section>
+    <h2>Errors</h2>
+    <div *ngIf="err$ | async as error; else noError" id="fade-it">{{error}}</div>
+    <ng-template #noError>
+        <div style="color: green;">No Errors occured</div>
+    </ng-template>
+</section>
