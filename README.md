@@ -8,9 +8,9 @@ This repository contains an exercise which you may do to practice some angular b
 
 ### further read
 
-- [angular foundations: all slides](https://devonfw.com/devon4ng-training/agenda/foundations-remote.html)
-- [angular foundations: ngrx intro](https://devonfw.com/devon4ng-training/ngrx/intro.html)
-- [official docs](https://ngrx.io/docs)
+- [angular foundations: all slides](https://devonfw-training.github.io/devon4ng-training/agenda/foundations-remote.html)
+- [angular foundations: ngrx intro](https://devonfw-training.github.io/devon4ng-training/ngrx/intro.html)
+- [official ngrx docs](https://ngrx.io/docs)
 
 ### content of exercise
 
