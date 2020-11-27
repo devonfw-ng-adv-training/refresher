@@ -25,7 +25,8 @@ What will be done in this exercise?
 5. creating specific selector for state
 6. creating actions & reducer functions for state changes
 
-If you have trouble during one step, you can cheat by taking a look at the specified backup branch.
+If you have trouble during one step, you can cheat by taking a look at the specified backup branch 
+(start with 0-start-setup, result of first step is 1-finished-ngrx-setup, and so on.)
 
 *hint: provided solution in backup branch may not be the best possible solution*
 
@@ -36,6 +37,10 @@ If there are questions, you can contact one of your trainers or keep them for th
 ### Check out project
     
     git clone https://github.com/devonfw-ng-adv-training/refresher
+
+### Start with initial branch
+
+    git checkout 0-start-setup
 
 ### Install dependencies
     
