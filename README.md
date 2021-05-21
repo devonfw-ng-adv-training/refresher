@@ -8,9 +8,9 @@ This repository contains an exercise which you may do to practice some angular b
 
 ### further read
 
-- [angular foundations: all slides](https://devonfw.com/devon4ng-training/agenda/foundations-remote.html)
-- [angular foundations: ngrx intro](https://devonfw.com/devon4ng-training/ngrx/intro.html)
-- [official docs](https://ngrx.io/docs)
+- [angular foundations: all slides](https://devonfw-training.github.io/devon4ng-training/agenda/foundations-remote.html)
+- [angular foundations: ngrx intro](https://devonfw-training.github.io/devon4ng-training/ngrx/intro.html)
+- [official ngrx docs](https://ngrx.io/docs)
 
 ### content of exercise
 
@@ -19,13 +19,14 @@ What will be done in this exercise?
 1. basic setup of project including redux devtools
 2. adding business functionality in app.component
 3. adding state to the application
-    1. root state
-    2. business state
+  1. root state
+  2. business state
 4. displaying state
 5. creating specific selector for state
 6. creating actions & reducer functions for state changes
 
-If you have trouble during one step, you can cheat by taking a look at the specified backup branch.
+If you have trouble during one step, you can cheat by taking a look at the specified backup branch
+(start with 0-start-setup, result of first step is 1-finished-ngrx-setup, and so on.)
 
 *hint: provided solution in backup branch may not be the best possible solution*
 
@@ -34,23 +35,27 @@ If there are questions, you can contact one of your trainers or keep them for th
 ## 1. Basic Setup of ngrx
 
 ### Check out project
-    
+
     git clone https://github.com/devonfw-ng-adv-training/refresher
 
+### Start with initial branch
+
+    git checkout 0-start-setup
+
 ### Install dependencies
-    
+
     npm install 
 
 ### Add [@ngrx/store](https://ngrx.io/guide/store/install) &  [@ngrx/store-devtools](https://ngrx.io/guide/store-devtools/install) to project
-    
+
     ng add @ngrx/store
     ng add @ngrx/store-devtools
 
 ### Install [Redux Devtools Extension](https://github.com/zalmoxisus/redux-devtools-extension) for your favorite browser
-  
-  - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools)
-  - [Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
-  - [Internet Explorer](https://www.youtube.com/watch?v=oHg5SJYRHA0)
+
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools)
+- [Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+- [Internet Explorer](https://www.youtube.com/watch?v=oHg5SJYRHA0)
 
 ### Start the Application
 
@@ -64,7 +69,7 @@ Check out application state in the browser and confirm *@ngrx/state/init* in the
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
+backup branch exists as [1-finished-ngrx-setup](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
 
 ## 2. Exercice One: adding a counter to app.component
 
@@ -83,7 +88,7 @@ Implement these functionalities to app.component and test the application.
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
+backup branch exists as [2-start-exercise-two](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
 
 
 ## 3. Exercise Two: setting up a state for counter
@@ -113,12 +118,12 @@ Does your application still work? How does the state in Redux Devtools now look 
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/3-start-exercise-two-pt-two) and will be used in the next step
+backup branch exists as [3-start-exercise-two-pt-two](https://github.com/devonfw-ng-adv-training/refresher/tree/3-start-exercise-two-pt-two) and will be used in the next step
 
 ## Part 2: setting up the counter state
 
 hint: for easier setup, you can install and use [@ngrx/schematics](https://ngrx.io/guide/schematics)
-    
+
     ng add @ngrx/schematics
 
 We now want to store the partial state `CounterState` in `AppState`. You can use schematics for this, or go step by step whatever is your preferred option.
@@ -176,7 +181,7 @@ fire up the application and check out if the value on Redux DevTools is correctl
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
+backup branch exists as [4-exercise-three-wiring-up-the-counter](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
 
 
 ## 4. Exercise Three: wiring up the counter to the state
@@ -196,7 +201,7 @@ For this we have the following doings:
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
+backup branch exists as [5-exercise-four-using-selectors](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
 
 ## 5. Exercise Four: using ngrx selectors
 
@@ -210,7 +215,7 @@ Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for d
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
+backup branch exists as [6-exercise-five-using-actions-and-wiring-them](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
 
 ## 6. Exercise Five: using ngrx actions
 
@@ -218,10 +223,10 @@ As a last step we want to be able to manipulate the data in the store. this is p
 
 ### Doings
 
-- create actions for 
-    - incrementing
-    - decrementing
-    - resetting
+- create actions for
+  - incrementing
+  - decrementing
+  - resetting
 - create reducer functions for all actions
 - dispatch actions in counter component
 
@@ -235,4 +240,21 @@ As a last step we want to be able to manipulate the data in the store. this is p
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
+backup branch exists as [7-ready-for-ng-adv](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
+
+## 7. Bonus Round: Use an effect
+
+Backend calls and other asynchronous logic cannot be integrated in a reducer since that is a pure function.
+ngrx supports that through [effects](https://ngrx.io/guide/effects).
+
+### Doings
+
+- create a service which simulates a backend call to return a binary representation of the value as string
+- integrate a call to this service as an effect whenever the value changes
+- optionally: create a small component which displays the current value from the store that can be reused
+  everywhere in your application
+
+### Backup branch
+
+backup branch exists as [8-binary-effect](https://github.com/devonfw-ng-adv-training/refresher/tree/8-binary-effect)
+(please note that this branch also contains some other structural changes in the application)
