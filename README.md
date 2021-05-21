@@ -69,7 +69,7 @@ Check out application state in the browser and confirm *@ngrx/state/init* in the
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
+backup branch exists as [1-finished-ngrx-setup](https://github.com/devonfw-ng-adv-training/refresher/tree/1-finished-ngrx-setup) and will be used in the next step
 
 ## 2. Exercice One: adding a counter to app.component
 
@@ -88,7 +88,7 @@ Implement these functionalities to app.component and test the application.
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
+backup branch exists as [2-start-exercise-two](https://github.com/devonfw-ng-adv-training/refresher/tree/2-start-exercise-two) and will be used in the next step
 
 
 ## 3. Exercise Two: setting up a state for counter
@@ -118,7 +118,7 @@ Does your application still work? How does the state in Redux Devtools now look 
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/3-start-exercise-two-pt-two) and will be used in the next step
+backup branch exists as [3-start-exercise-two-pt-two](https://github.com/devonfw-ng-adv-training/refresher/tree/3-start-exercise-two-pt-two) and will be used in the next step
 
 ## Part 2: setting up the counter state
 
@@ -181,7 +181,7 @@ fire up the application and check out if the value on Redux DevTools is correctl
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
+backup branch exists as [4-exercise-three-wiring-up-the-counter](https://github.com/devonfw-ng-adv-training/refresher/tree/4-exercise-three-wiring-up-the-counter) and will be used in the next step
 
 
 ## 4. Exercise Three: wiring up the counter to the state
@@ -201,7 +201,7 @@ For this we have the following doings:
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
+backup branch exists as [5-exercise-four-using-selectors](https://github.com/devonfw-ng-adv-training/refresher/tree/5-exercise-four-using-selectors) and will be used in the next step
 
 ## 5. Exercise Four: using ngrx selectors
 
@@ -215,7 +215,7 @@ Up next we will create a [selector](https://ngrx.io/guide/store/selectors) for d
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
+backup branch exists as [6-exercise-five-using-actions-and-wiring-them](https://github.com/devonfw-ng-adv-training/refresher/tree/6-exercise-five-using-actions-and-wiring-them) and will be used in the next step
 
 ## 6. Exercise Five: using ngrx actions
 
@@ -240,4 +240,21 @@ As a last step we want to be able to manipulate the data in the store. this is p
 
 ### Backup branch
 
-backup branch exists [here](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
+backup branch exists as [7-ready-for-ng-adv](https://github.com/devonfw-ng-adv-training/refresher/tree/7-ready-for-ng-adv)
+
+## 7. Bonus Round: Use an effect
+
+Backend calls and other asynchronous logic cannot be integrated in a reducer since that is a pure function.
+ngrx supports that through [effects](https://ngrx.io/guide/effects).
+
+### Doings
+
+- create a service which simulates a backend call to return a binary representation of the value as string
+- integrate a call to this service as an effect whenever the value changes
+- optionally: create a small component which displays the current value from the store that can be reused 
+  everywhere in your application
+
+### Backup branch
+
+backup branch exists as [8-binary-effect](https://github.com/devonfw-ng-adv-training/refresher/tree/8-binary-effect)
+(please note that this branch also contains some other structural changes in the application)
