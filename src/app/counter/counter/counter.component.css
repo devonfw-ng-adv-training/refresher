@@ -1,0 +1,7 @@
+.flex {
+    display: flex;
+}
+
+div.auto {
+    margin: 0 12px 0 0;
+}
