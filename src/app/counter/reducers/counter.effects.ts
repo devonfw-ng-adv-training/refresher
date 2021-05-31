@@ -1,23 +1,23 @@
-import { Injectable } from '@angular/core';
-import { Actions, createEffect, Effect, ofType } from '@ngrx/effects';
-import { incrementCounter, binaryValueSuccess, binaryValueError, decrementCounter } from '../counter/counter.actions';
-import { map, concatMap, catchError, withLatestFrom, tap } from 'rxjs/operators';
-import { of, Observable, combineLatest, throwError } from 'rxjs';
-import { CounterService } from '../counter.service';
-import { AppState } from 'src/app/reducers';
-import { Store, select } from '@ngrx/store';
-import { selectCounterValue } from './counter.selectors';
+import {Injectable} from '@angular/core';
+import {Actions, createEffect, ofType} from '@ngrx/effects';
+import {binaryValueError, binaryValueSuccess, decrementCounter, incrementCounter} from '../counter/counter.actions';
+import {concatMap, map, withLatestFrom} from 'rxjs/operators';
+import {CounterService} from '../counter.service';
+import {AppState} from 'src/app/reducers';
+import {Action, select, Store} from '@ngrx/store';
+import {selectCounterValue} from './counter.selectors';
 
 
 @Injectable()
 export class CounterEffects {
 
-  @Effect()
-  public increment$: Observable<any> = this.actions$.pipe(
+  increment$ = createEffect(() => this.actions$.pipe(
     ofType(incrementCounter, decrementCounter),
-    map(action => action.changeValue),
+    // we're not interested in the changeValue from the action, but the current value from the store, so we "join" that
     withLatestFrom(this.store.pipe(select(selectCounterValue))),
-    map((changeValues: [number, number]) => changeValues[1]),
+    // and then discard the action we got
+    map((actionAndStoreValue: [Action, number]) => actionAndStoreValue[1]),
+    // now the backend call is made
     concatMap((newValue: number) => this.counterService.getBinary(newValue)
       .pipe(map(binaryValue => {
         if (binaryValue.length > 10) {
@@ -26,9 +26,7 @@ export class CounterEffects {
         else {
           return binaryValueSuccess({ binaryValue: binaryValue })
         }
-      }))
-    ),
-  );
+      })))));
 
   constructor(private actions$: Actions, private counterService: CounterService, private store: Store<AppState>) { }
 
