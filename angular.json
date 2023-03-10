@@ -123,6 +123,11 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-adv-refresher"
+    }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@ngrx/schematics"
+    ]
+  }
 }

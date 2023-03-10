@@ -1,7 +1,7 @@
 import * as fromCounter from './counter.actions';
 
-describe('loadCounters', () => {
+describe('Counter Actions', () => {
   it('should return an action', () => {
-    expect(fromCounter.loadCounters().type).toBe('[Counter] Load Counters');
+    expect(fromCounter.binaryValueSuccess(null).type).toBe('[Counter API] success binary value');
   });
 });

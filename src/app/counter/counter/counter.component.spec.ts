@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
+import {provideMockStore} from '@ngrx/store/testing';
+import {initialState} from '../reducers';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
@@ -8,7 +10,8 @@ describe('CounterComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CounterComponent ]
+      declarations: [ CounterComponent ],
+      providers: [provideMockStore({ initialState })],
     })
     .compileComponents();
   }));

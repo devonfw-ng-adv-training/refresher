@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     HttpClientModule,
-    StoreModule.forFeature(fromCounter.counterFeatureKey, fromCounter.reducer),
+    StoreModule.forFeature(fromCounter.counterFeatureKey, fromCounter.counterReducer),
     EffectsModule.forFeature([CounterEffects]),
   ],
   exports: [CounterComponent]

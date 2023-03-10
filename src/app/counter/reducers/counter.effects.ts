@@ -21,10 +21,10 @@ export class CounterEffects {
     concatMap((newValue: number) => this.counterService.getBinary(newValue)
       .pipe(map(binaryValue => {
         if (binaryValue.length > 10) {
-          return binaryValueError({err: 'stack overflow'})
+          return binaryValueError({err: 'stack overflow'});
         }
         else {
-          return binaryValueSuccess({ binaryValue: binaryValue })
+          return binaryValueSuccess({ binaryValue });
         }
       })))));
 

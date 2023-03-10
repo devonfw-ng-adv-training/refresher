@@ -1,10 +1,11 @@
 import { ActionReducerMap } from '@ngrx/store';
-import { reducer } from '../counter/reducers';
+import * as fromCounter from '../counter/reducers';
+
 
 export interface AppState {
-  [K: string]: any
+  [fromCounter.counterFeatureKey]: fromCounter.CounterState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  counter: reducer
+  [fromCounter.counterFeatureKey]: fromCounter.counterReducer
 };

@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
 import { reducers } from './reducers';
 import { CounterModule } from './counter/counter.module';
 import { EffectsModule } from '@ngrx/effects';
@@ -16,10 +15,10 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    CounterModule,
     SharedModule,
     StoreModule.forRoot(reducers),
-    !environment.production ? []: StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    CounterModule,
     EffectsModule.forRoot([]),
   ],
   providers: [],

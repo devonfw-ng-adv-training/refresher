@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CounterState } from '../reducers';
-import { State, select, Store } from '@ngrx/store';
-import { map, tap } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { select, Store } from '@ngrx/store';
 import { AppState } from 'src/app/reducers';
 import { selectCounterValue, selectCounterValueBinary, selectCounterError } from '../reducers/counter.selectors';
 import { resetCounter, incrementCounter, decrementCounter } from './counter.actions';
@@ -19,9 +17,6 @@ export class CounterComponent {
 
   err$ = this.counterStore.pipe(select(selectCounterError));
 
-  /**
-   *
-   */
   constructor(private counterStore: Store<AppState>) {
 
   }

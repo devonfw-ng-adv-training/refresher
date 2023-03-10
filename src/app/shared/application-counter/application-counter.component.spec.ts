@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ApplicationCounterComponent } from './application-counter.component';
+import {provideMockStore} from "@ngrx/store/testing";
+import {initialState} from "../../counter/reducers";
 
 describe('ApplicationCounterComponent', () => {
   let component: ApplicationCounterComponent;
@@ -8,7 +10,10 @@ describe('ApplicationCounterComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApplicationCounterComponent ]
+      declarations: [ ApplicationCounterComponent ],
+      providers: [
+        provideMockStore({ initialState }),
+      ],
     })
     .compileComponents();
   }));
