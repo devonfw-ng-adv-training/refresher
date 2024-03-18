@@ -14,7 +14,7 @@ import { CounterModule } from './counter/counter.module';
   imports: [
     BrowserModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true}),
     CounterModule
   ],
   providers: [],
