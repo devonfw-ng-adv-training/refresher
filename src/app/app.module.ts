@@ -13,7 +13,7 @@ import { reducers } from './reducers';
   imports: [
     BrowserModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
