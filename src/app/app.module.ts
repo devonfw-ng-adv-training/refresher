@@ -17,7 +17,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     SharedModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true}),
     CounterModule,
     EffectsModule.forRoot([]),
   ],
